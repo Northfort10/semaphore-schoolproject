@@ -1,0 +1,34 @@
+---
+- name: Home Office Software Package
+  hosts: pi2
+  become: yes
+
+  tasks:
+    - name: Aktualisiere die Paketliste
+      apt:
+        update_cache: yes
+
+    - name: Installiere Geany
+      apt:
+        name: geany
+        state: present
+
+    - name: Installiere FileZilla
+      apt:
+        name: filezilla
+        state: present
+
+    - name: Installiere VLC Media Player
+      apt:
+        name: vlc
+        state: present
+
+    - name: Installiere GIMP
+      apt:
+        name: gimp
+        state: present
+
+    - name: Installiere LibreOffice
+      apt:
+        name: libreoffice
+        state: present
